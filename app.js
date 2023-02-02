@@ -46,3 +46,35 @@ while (x <= 100) {
   x++;
 }
 
+//4. Find value
+
+let value = Math.round(Math.random() * 500); //random num between 0 to 500
+let n = Math.round(Math.random() * (500 - 100) + 100); //random num between 100 to 500
+
+for (let i = 0; i < n; i++) {
+  if (i == value) {
+    console.log("Found value");
+    break;
+  } else {
+    console.log("Did not find the value");
+  }
+}
+
+//5. FizzBuzz Remix with random numbers
+
+let fizzDivisor = Math.round(Math.random() * (10 - 1) + 1); //Math.random() * (MAX - MIN) + 1
+let buzzDivisor = Math.round(Math.random() * (10 - 1) + 1);
+let nn = Math.round(Math.random() * (100 - 1) + 1);
+i = Math.round(Math.random() * (10 - 1) + 1);
+
+for (i = 0; i < nn; i++) {
+  if (i % fizzDivisor == 0 && i % buzzDivisor == 0) {
+    console.log(i, "FizzBuzz");
+  } else if (i % fizzDivisor == 0) {
+    console.log(i, "Fizz");
+  } else if (i % buzzDivisor == 0) {
+    console.log(i, "Buzz");
+  } else {
+    console.log(i);
+  }
+}
